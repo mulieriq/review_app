@@ -1,7 +1,32 @@
 import 'package:flutter/material.dart';
+import 'package:widgetbook_annotation/widgetbook_annotation.dart';
 
 void main() {
   runApp(const MyApp());
+}
+
+@WidgetbookApp.material(
+  name: "Review App",
+  textScaleFactors: [1.0],
+  devices: [
+    Device(
+        name: "Tab",
+        resolution: Resolution(
+            nativeSize: DeviceSize(
+              height: 1920,
+              width: 1200,
+            ),
+            scaleFactor: 2),
+        type: DeviceType.tablet),
+    Samsung.s21ultra,
+    Samsung.s10
+  ],
+  foldersExpanded: true,
+  widgetsExpanded: true,
+)
+@WidgetbookUseCase(name: 'App Entry Point', type: MyApp)
+Widget appMainScreenUseCase(BuildContext context) {
+  return const MyApp();
 }
 
 class MyApp extends StatelessWidget {
