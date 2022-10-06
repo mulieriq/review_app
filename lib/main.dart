@@ -133,9 +133,10 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
+        foregroundColor: Colors.red,
         onPressed: _incrementCounter,
         tooltip: 'Increment',
-        child: const Icon(Icons.add),
+        child: const Icon(Icons.dangerous),
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
