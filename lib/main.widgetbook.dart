@@ -6,7 +6,9 @@
 
 import 'dart:core';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:review_app/main.dart';
+import 'package:review_app/theme.dart';
 import 'package:widgetbook/widgetbook.dart';
 
 void main() {
@@ -22,7 +24,12 @@ class HotReload extends StatelessWidget {
       appInfo: AppInfo(
         name: 'Review App',
       ),
-      themes: [],
+      themes: [
+        WidgetbookTheme(
+          name: 'Light',
+          data: getLightTheme(),
+        ),
+      ],
       devices: [
         Device(
           name: 'Tab',
